@@ -2,6 +2,12 @@
   "name": "crx-dev-server",
   "version": "1.0.0",
   "description": "Dev server for Chrome extensions with hot reload capabilities",
+  "author": "Zachary Lumpkins",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zdoc01/crx-dev-server.git"
+  },
   "main": "index.js",
   "files": [
     "index.js",
@@ -21,8 +27,6 @@
     "reload",
     "hot-reload"
   ],
-  "author": "Zachary Lumpkins",
-  "license": "MIT",
   "dependencies": {
     "crx-hotreload": "^1.0.2"
   },
