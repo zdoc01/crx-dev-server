@@ -1,0 +1,39 @@
+{
+  "name": "crx-dev-server",
+  "version": "1.0.0",
+  "description": "Dev server for Chrome extensions with hot reload capabilities",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "bin": {
+    "crx-dev-server": "./index.js"
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "reload",
+    "hot-reload"
+  ],
+  "author": "Zachary Lumpkins",
+  "license": "MIT",
+  "dependencies": {
+    "crx-hotreload": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "1.16.4"
+  }
+}
