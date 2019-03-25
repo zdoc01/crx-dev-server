@@ -24,12 +24,12 @@ $ crx-dev-server --manifest=/path/to/your/manifest.json
 
 # How does it work?
 
-This package injects a background script (see [crx-hot-reload]()) into your project's `manifest.json` that watches for file changes and auto-reloads your extension when they occur.
+This package injects a background script (see [crx-hotreload](https://github.com/xpl/crx-hotreload)) into your project's `manifest.json` that watches for file changes and auto-reloads your extension when they occur.
 
 The background script (`hot-reload.js`) is copied into your project alongside your `manifest.json` (Chrome requires content and background scripts be local and relative to your `manifest.json`), then removed when the server is stopped.
 
 # Motivation
 
-I love the work that went into `crx-hot-reload` as it makes my life easier as an extension developer, but I wanted a way to keep the background script definition out of my `manifest.json` so I could ship the extension without dev assets.
+I love the work that went into `crx-hotreload` as it makes my life easier as an extension developer, but I wanted a way to keep the background script definition out of my `manifest.json` so I could ship the extension without dev assets.
 
 You can achieve something similar with a CI/CD pipeline, but that isn't necessarily applicable to every project.
