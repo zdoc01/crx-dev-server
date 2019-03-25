@@ -1,6 +1,6 @@
 {
   "name": "crx-dev-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dev server for Chrome extensions with hot reload capabilities",
   "author": "Zachary Lumpkins",
   "license": "MIT",
