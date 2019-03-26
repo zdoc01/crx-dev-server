@@ -12,7 +12,7 @@ const args = process.argv[2];
 // otherwise use the path defined in --manifest
 let extManifest = './manifest.json';
 if (!fs.existsSync(path.resolve(extManifest))) {
-  if (args.length === 3 && args[2].startsWith('--manifest')) {
+  if (args.startsWith('--manifest')) {
     /* eslint-disable-next-line prefer-destructuring */
     extManifest = args.split('=')[1];
   } else {
@@ -20,7 +20,7 @@ if (!fs.existsSync(path.resolve(extManifest))) {
     console.log(
       'Add one to the current directory, or specify a path via the --manifest option'
     );
-    console.log('Usage: `crx-dev-server --manifest=/path/to/manifest.json`');
+    console.log('Usage: `crx-dev-server --manifest=path/to/manifest.json`');
     process.exit(1);
   }
 }
@@ -32,7 +32,7 @@ const HOT_RELOAD_PATH = MANIFEST_PATH.replace(
 );
 
 if (!fs.existsSync(MANIFEST_PATH)) {
-  console.log(`No manifest found at the specified path ${MANIFEST_PATH}`);
+  console.log(`No manifest found at the specified path ${extManifest}`);
   process.exit(1);
 }
 
@@ -84,5 +84,5 @@ process.on('SIGINT', () => {
 // keep process alive to emulate "server"
 setInterval(() => {}, MAX_TIMEOUT_DURATION);
 
-console.log('Hot reload for your extension is up and running.');
-console.log('Start making changes and watch the magic happen!');
+console.log(`Starting crx-dev-server for the [ ${original.name} ] extension`);
+console.log(`Using manifest at [ ${extManifest} ]`);
